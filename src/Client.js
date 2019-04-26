@@ -32,9 +32,9 @@ class Operations {
 			}
 		}, 1);		
 	}
-
-	send(socket, data) {
-		var socket = net.connect(socket, function() {
+	// {url,port}
+	send(socket_param, data) {
+		var socket = net.connect(socket_param, function() {
 			socket.write(data);
 
 			socket.on('data', function(data) {
